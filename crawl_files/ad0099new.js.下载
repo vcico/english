@@ -1,0 +1,8 @@
+document.writeln('<div class="warp adv_link">');
+document.writeln('<a href="http://www.en8848.com.cn/xiaoxue/zidingyi/xxyy.html" target="_blank" title="孩子英语不好怎么办?">孩子英语不好怎么办?</a>');
+document.writeln('<a href="http://www.51talk.com/landing/xsyymt_0028.html" target="_blank" title="真人外教一对一，马上开口说英语">真人外教一对一，马上开口说英语</a>');
+document.writeln('<a href="http://www.ef.com.cn" target="_blank" title="全球著名英语培训专家">全球著名英语培训专家</a>');
+document.writeln('<a href="http://www.en8848.com.cn/app/"  target="_blank" title="En8848免费App-随时随地学英语">En8848免费App-随时随地学英语</a>');
+document.writeln('<a href="http://www.en8848.com.cn/erweima/index.html"  target="_blank" title="学英语小工具">学英语小工具</a>');
+document.writeln('<div style="float:left; margin-top:3px;"><script type="text/javascript">BAIDU_CLB_fillSlot("928190");</script>');
+document.writeln('</div></div>');

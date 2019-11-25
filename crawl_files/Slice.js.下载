@@ -1,0 +1,188 @@
+//通用滑动门
+//输入：total：当前总的门数  th:要开的门  tit:当前门头  na:门的名字  cn:Css
+function HuaDongMen(total, th, tit, na, cn) 
+{
+ for (var i = 1; i <= total; i++)
+	{
+     if(tit!="")
+	{
+     document.getElementById(tit+i).className = 't'+i;
+     }
+     document.getElementById(na+i).style.display = 'none';
+     }
+     if(tit!="")
+	{
+     document.getElementById(tit+th).className = cn;
+     }
+     document.getElementById(na+th).style.display = 'block';
+    } 
+	
+	function HuaDongMenpd(total, th, tit, na, cn) {
+         for (var i = 1; i <= total; i++)
+		 {
+            if(tit!="")
+			{
+              document.getElementById(tit+i).className = 'a'+i;
+            }
+            document.getElementById(na+i).style.display = 'none';
+         }
+        if(tit!="")
+		{
+          document.getElementById(tit+th).className = cn;
+        }
+        document.getElementById(na+th).style.display = 'block';
+    } 
+	
+	
+	function tophd(alls,j,contentsid,titids,titdi)
+	{
+		for(var i=1;i<=alls;i++){
+		var ids=document.getElementById(contentsid+i);
+		if(i==j){
+		ids.style.display='block';
+		document.getElementById(titids+i).style.backgroundImage='url()';
+		document.getElementById(titdi+i).style.backgroundColor='#F2F8FB';
+		
+		}
+		else{
+		ids.style.display='none';
+		document.getElementById(titids+i).style.backgroundImage='url(images/backg.jpg)';
+		document.getElementById(titdi+i).style.backgroundColor='white';
+		}
+		}
+		}
+		
+		function channelrithd(allul,k,conids,tou,toubgcolor)
+		{
+			for(var i=1;i<=allul;i++){
+		var ids=document.getElementById(conids+i);
+		if(i==k)
+		{ids.style.display='block';
+		document.getElementById(tou+i).style.backgroundColor=toubgcolor;
+		document.getElementById(tou+i).style.color='white';
+		
+		}
+		else
+		{ids.style.display='none';
+		document.getElementById(tou+i).style.backgroundColor='#F5F5F5';
+		document.getElementById(tou+i).style.color='#006699';
+		}
+		}
+	    }
+		
+		function channelrithds(allul,k,conids,tou,toubgcolor)
+		{
+			for(var i=1;i<=allul;i++){
+		var ids=document.getElementById(conids+i);
+		if(i==k)
+		{ids.style.display='block';
+		document.getElementById(tou+i).style.backgroundColor=toubgcolor;
+		document.getElementById(tou+i).style.color='#2D2D2D';
+		
+		}
+		else
+		{ids.style.display='none';
+		document.getElementById(tou+i).style.backgroundColor='#F5F5F5';
+		document.getElementById(tou+i).style.color='#2D2D2D';
+		}
+		}
+	    }
+		
+		
+		
+//flash
+ var pb=1;
+ var ppb='start';
+ function commonjs(pb)
+ {
+	 var bigimgid=document.getElementById("big_img");
+	 for(var ii=1;ii<=4;ii++)
+	 {
+		 var spanid = document.getElementById("innerspan"+ii);
+		 spanid.style.backgroundColor='black';
+		 document.getElementById("fla_dts"+ii).style.display='none';
+		 document.getElementById("imgaids" + ii).style.display='none';
+	 }
+	 document.getElementById("innerspan" + pb).style.backgroundColor='#ffff13';
+	 document.getElementById("fla_dts" + pb).style.display='block';
+	 document.getElementById("imgaids" + pb).style.display='block';
+		// bigimgid.src='images/sw_r10_c2.jpg';
+ }
+ function midclick(ppbb)
+ {
+	 pb=ppbb;
+	 commonjs(pb);
+ }
+ function next()
+ {
+	 pb++;
+	 if(pb>=4)
+	 pb=0;
+	  commonjs(pb);
+	  if(pb>=4)
+	 pb=0;
+ }
+ function pre()
+ {
+	 pb--;
+	  if(pb<=0)
+	  pb=4;
+	  commonjs(pb);
+ }
+ function next()
+ {
+	 pb++;
+	 commonjs(pb);
+	 if(pb>=4)
+	 pb=0;
+ }
+ function stopfor()
+ {
+	 ppb='stop';
+ }
+ function startfor()
+ {
+	 ppb='start';
+ }
+ function flashs()
+ {
+	 if(ppb=='start'){
+	 pb++;
+	 commonjs(pb);
+	 if(pb>=4)
+	 pb=0;
+ }
+ window.setTimeout("flashs()",5000);
+ }
+
+//nav js
+function navlistshow(countsall,xulie,navspanid,comids)
+{
+for(var lis=1;lis<=countsall;lis++)
+{
+var navlistid=document.getElementById(comids+lis);
+if(xulie==lis)
+{
+navlistid.style.display='block';
+}
+else
+{
+navlistid.style.display='none';
+}
+}
+var navspanids=document.getElementById(navspanid+xulie);
+navspanids.style.backgroundColor='#1e5a8c';
+}
+function navlisthide(hni,comidss)
+{
+var hidenavid=document.getElementById(hni);
+var comid=document.getElementById(comidss);
+hidenavid.style.display='none';
+comid.style.backgroundColor='';
+}
+function navlistshows(nrid,titids)
+{
+document.getElementById(nrid).style.display='block';
+document.getElementById(titids).style.backgroundColor='#1e5a8c';
+
+}

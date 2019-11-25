@@ -9,4 +9,6 @@ hell 地狱
 
 [老友记台词](https://fangj.github.io/friends/)
 
+语法  http://www.siyuanedu.com/bbs/siyuanxgnyf
+
 

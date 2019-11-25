@@ -1,0 +1,48 @@
+//document.write("<script language=javascript src='/js/jquery-1.7.2.min.js'></script>");
+this.imagepreview_sean = function(){	
+		xOffset = 10;
+		yOffset = 30;
+	$("a.preview_sean").hover(function(e){
+		this.t = this.title;
+		this.title = "";	
+		var c = (this.t != "") ? "<br/>" + this.t : "";
+		$("body").append("<p id='preview_sean'><img src='"+ this.href +"' alt='Image preview_sean' />"+ c +"</p>");								 
+		$("#preview_sean")
+			.css("top",(e.pageY - xOffset) + "px")
+			.css("left",(e.pageX + yOffset) + "px")
+			.fadeIn("fast");						
+    },
+	function(){
+		this.title = this.t;	
+		$("#preview_sean").remove();
+    });	
+	$("a.preview_sean").mousemove(function(e){
+		$("#preview_sean")
+			.css("top",(e.pageY - xOffset) + "px")
+			.css("left",(e.pageX + yOffset) + "px");
+	});			
+};
+window.onload=function(){imagepreview_sean();}
+//$(document).ready(function(){
+//	imagepreview_sean();
+//});
+
+//判断是否是手机访问，如果是跳转到指定的页面 domain 为新域名
+function uaredirect(domain){
+	var url = window.location.href ;
+	var old_domain = document.domain;	//旧域名
+	url = url.replace(old_domain , domain);		//替换下域名
+    try {
+			//在手机页面 写一个dom id = bdmark  如果检测到则不需要跳转 否则视为www页
+            if(document.getElementById("bdmark") != null){
+                return;
+            }
+            if ((navigator.userAgent.toLowerCase().match(/(iphone|ipod|android|ios|ucweb|windows ce|windows mobile|midp|rv:1.2.3.4)/i))) {
+					location.replace(url);
+			} 
+		} catch(err){
+		}
+}
+uaredirect('3g.en8848.com.cn');
+
+

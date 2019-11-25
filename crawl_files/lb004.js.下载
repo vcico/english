@@ -1,0 +1,4 @@
+
+document.writeln('<div style="margin-top:10px; margin-left:50px; margin-bottom:50px;"><script type="text/javascript">BAIDU_CLB_fillSlot("1138822");</script></div>');
+document.write('<script type="text/javascript" >BAIDU_CLB_SLOT_ID = "3086455";</script>');
+document.write('<script src="http://dup.baidustatic.com/js/os.js"></script>');
